@@ -1,0 +1,80 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Actividad 4}
+\author{Roberto Alexis Gomez Pintor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Introduccion}
+En esta actividad se realizara el uso de los comandos para bajar y modificar archivos descargados del sitio de la universidad de Wyoming, los datos fueron de la estacion 34467 Vologrado, Rusia, desde el 1 de enero de 2017 hasta el 31 de diciembre del 2017, haciendo el uso de un año de datos. Entre los principales comandos que usaremos seran chmod,less,etc.
+
+\section{Comandos}
+\subsection{cat}
+El comando "cat" permite leer en secuencia archivos dada en sus argumentos, escribiendo sus contenidos de forma estandar en la misma secuencia. En el uso del comando se uso para unir 12 archivos descargados en uno solo permitiendo una region mas limpia del manejo de archivos.
+\subsection{chmod}
+En los sistemas tipos UNIX, "chmod" es un comando y llamada del sistema que cambia los permisos de acceso a los objetos del sistema de archivos. El uso de este comando en la actividad se utlizo para cambiar los permisos del archivo que se descargo para trabajar.
+\subsection{echo}
+EL comando "echo" se utiliza para imprimir texto a la pantalla, ademas de esto el comando permite usar variables y otros elementos de interpetre de comandos. En las implementaciones más comunes y usadas como Bash, echo se trata de una función built-in, es decir, una función interna del intérprete de comandos y no un programa externo, así como cat o grep.
+\subsection{grep}
+El comando "grep", que significa impresión de expresiones regulares global(ingles seria global regular expression print), permanece entre los comandos más versátiles en un entorno de terminal Linux. Resulta ser un programa inmensamente poderoso que les da a los usuarios la capacidad de ordenar entradas basadas en reglas complejas, convirtiéndolo así en un enlace bastante popular a través de numerosas cadenas de comando.
+\subsection{less}
+El comandon "less" less es un programa de pager de terminal en Unix, Windows y sistemas similares a Unix utilizados para ver (pero no cambiar) el contenido de un archivo de texto una pantalla a la vez. A diferencia de la mayoría de los editores de texto de Unix / viewers, less no necesita leer todo el archivo antes de comenzar, lo que resulta en tiempos de carga más rápidos con archivos de gran tamaño.
+\subsection{ls}
+El comando "ls" es un comando para listar archivos en Unix y sistemas operativos tipo Unix. ls se especifica mediante POSIX y la especificación Single UNIX. Cuando se invoca sin argumentos, "ls" enumera los archivos en el directorio de trabajo actual.
+\subsection{wc}
+EL comando "wc" (word count) es un comando en sistemas operativos tipo Unix. El programa lee la entrada estándar o una lista de archivos y genera una o más de las siguientes estadísticas: cuenta de nueva línea, conteo de palabras y conteo de bytes. Si se proporciona una lista de archivos, se incluyen tanto el archivo individual como las estadísticas totales.
+\section{Sintesis Shell Script Tutorial}
+EL tutorial esta escrito para comprender a las personas a comprender algunos de los conceptos básicos de la programación de scripts de shell, presentar algunas de las posibilidades de la programación simple pero potente disponible bajo el shell Bourne. Steve Bourne escribió el intérprete de Bourne que apareció en la versión Seventh Edition Bell Labs Research de Unix. Se han escrito muchas otras conchas; este tutorial particular se concentra en los proyectiles Bourne y Bourne Again. Otros shells incluyen Korn Shell (ksh), C Shell (csh) y variaciones como tcsh. El tuorial supone alguna experiencia previa; a saber:
+
+Uso de un shell interactivo de Unix / Linux
+Conocimiento mínimo de programación: uso de variables, funciones, conocimiento de fondo útil
+Comprensión de algunos comandos de Unix / Linux y competencia en el uso de algunos de los más comunes. (ls, cp, echo, etc.)
+Programadores de ruby, perl, python, C, Pascal o cualquier lenguaje de programación (incluso BASIC) que puedan leer scripts de shell, pero no sienten que entienden exactamente cómo funcionan.
+
+Es posible que desee revisar algunos de los comentarios que ha recibido este tutorial para ver qué tan útil puede ser.
+
+\begin{verbatim}
+PS1="$ " ; export PS1
+\end{verbatim}
+
+\begin{verbatim}
+$ echo '#!/bin/sh' > my-script.sh
+$ echo 'echo Hello World' >> my-script.sh
+$ chmod 755 my-script.sh
+$ ./my-script.sh
+Hello World
+$
+\end{verbatim}
+
+\begin{verbatim}
+#!/bin/sh
+# This is a comment!
+echo Hello World	# This is a comment, too!
+\end{verbatim}
+\section{Apendice}
+\subsection{¿Qué fue lo que más te llamó la atención en esta actividad?}
+El uso de los comandos para modificar un scrip y bajar los archivos de forma automatica, ademas de permitir contar cantidad de informacion que contenia la base de datos descargadas.
+\subsection{¿Qué consideras que aprendiste?}
+El mejoramiento de la terminal mientras la uso, dando que mayormente uso el aspecto grafico para manjear la informacion.
+\subsection{¿Cuáles fueron las cosas que más se te dificultaron?}
+Ningun error mayor que el tipo ortografico al escribir cada comando.
+\subsection{¿Cómo se podría mejorar en esta actividad?}
+Ninguna mejoria.
+\subsection{¿En general, cómo te sentiste al realizar en esta actividad?}
+AL principio algo confundido, pero con mas esfuerzo pude comprender mejor la actividad, ademas de la ayuda tanto del profesor como de los compañeros para continuar con esta actividad.
+\end{document}
