@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Actividad 9}
+\author{Roberto Alexis Gómez Pintor}
+\usepackage{float}
+\usepackage{graphicx}
+\begin{document}
+\maketitle
+\section{Introducción}
+El sistema de álgebra computacional Maxima es un motor de cálculo simbólico escrito en lenguaje Lisp publicado bajo licencia GNU GPL. Cuenta con un amplio conjunto de funciones para hacer manipulación simbólica de polinomios, matrices, funciones racionales, integración, derivación, manejo de gráficos en 2D y 3D, manejo de números de coma flotante muy grandes, expansión en series de potencias y de Fourier, entre otras funcionalidades. Viene con cientos de auto pruebas (test-suite). Maxima funciona en modo consola, sin embargo incluye las interfaces gráficas xMaxima y wxMaxima para facilitar su uso. También puede hacer uso de la interfaz gráfica de SageMath, que facilita su integración con otras herramientas CAS. Como está escrito en Common Lisp, es fácilmente accesible para la programación, desde la capa inferior de Lisp puede llamarse a Maxima.
+\section{Desarrollo}
+Durante el proceso de la actividad ejecutamos wxMaxima, al abrirla encontramos 2 ventanas, una pequeña de sugerencias y otra para el desarrollo de los experimentos. En nuestro proceso de la clase vemos en la ventana grande vemos varias opciones, en estas podemos elegir que se debe hacer desde hacer simple sumas y restas hasta integrales y derivadas, ademas de hacer gráficas 2D y 3D.
+\subsection{Integracion}
+Maxima tiene varias rutinas para manejar la integración. La función de integración hace uso de la mayoría de ellos. También está el paquete antid, que maneja una función no especificada (y sus derivados, por supuesto).En términos generales, Maxima solo maneja integrales que son integrables en términos de las "funciones elementales" (funciones racionales, trigonometría, registros, exponenciales, radicales, etc.) y algunas extensiones (función de error, dilogaritmo). No maneja las integrales en términos de funciones desconocidas como g (x) y h (x).
+\subsection{Ejemplo.}
+\begin{verbatim}
+(%i1) assume(a > 0)$
+(%i2) 'integrate (%e**sqrt(a*y), y, 0, 4);
+                      4
+                     /
+                     [    sqrt(a) sqrt(y)
+(%o2)                I  %e                dy
+                     ]
+                     /
+                      0
+(%i3) changevar (%, y-z^2/a, z, y);
+                      0
+                     /
+                     [                abs(z)
+                   2 I            z %e       dz
+                     ]
+                     /
+                      - 2 sqrt(a)
+(%o3)            - ----------------------------
+\end{verbatim}
+\section{Apéndice}
+\subsection{¿Cuál fue tu primera impresión de wxmaxima?}
+Un entorno mas sencillo que el uso de Mathematica, ademas de ser una herramienta gratis a diferencia de otros productos que se tiene que pagar la licencia.
+\subsection{¿Crees que esta herramienta puede ser útil en otros de tus cursos?}
+Es muy útil para los cursos de Cálculos, Álgebra Lineal, Ecuaciones diferenciales, Geometría Analítica, dado que permiten realizar los problemas de forma sencilla.
+\subsection{¿Qué se te dificultó mas en esta actividad?}
+No encontré ningún problema al uso de esta actividad debido a que ya tenia historia del uso de esta aplicación.
+\subsection{¿Se te hizo compleja esta actividad? ¿Cómo la mejorarías?}
+No creo que requiera mejoras para hacerla compleja ni sencilla, la actividad esta perfecta como esta.
+\end{document}
